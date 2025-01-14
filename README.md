@@ -13,3 +13,5 @@ Az értesítés figyelmeztetni fog, hogy mikor érdemes megnézned a filmet, és
 A rendszer automatikusan generálja a legnépszerűbb filmjeid listáját, így mindig könnyen megtalálhatod, mely filmek kapták tőled a legmagasabb pontszámot.
 
 
+
+

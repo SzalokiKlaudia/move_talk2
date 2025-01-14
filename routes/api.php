@@ -41,7 +41,7 @@ Route::middleware(['auth:sanctum', Admin::class])->group(function () {
 
 //Moderátor
 Route::middleware(['auth:sanctum', Moderator::class])->group(function () {
-    Route::delete('/admin/delete/comment/{id}', [RegisteredUserController::class, 'destroyComment']);
+    Route::delete('/moderator/delete/comment/{id}', [RegisteredUserController::class, 'destroyComment']);
 });
 
 
