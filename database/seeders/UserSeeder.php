@@ -39,12 +39,12 @@ class UserSeeder extends Seeder
             ],
             [
                 'id' => 3,
-                'user_name' => 'vendeg',
-                'email' => 'vendeg@vendeg.hu',
-                'name' => 'Vendég Vilmos',
+                'user_name' => 'moderator',
+                'email' => 'moderator@moderator.hu',
+                'name' => 'Moderátor Vilmos',
                 'gender' => 'male',
                 'birth_year' => 1991,
-                'role' => 2,//vendég
+                'role' => 2,//moderátor
                 'is_deleted' => false,
                 'password' => Hash::make('vilmos')
             ],
