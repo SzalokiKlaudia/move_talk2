@@ -24,6 +24,9 @@ Route::middleware(['auth:sanctum'])->group(function () { ///user útvonal vissza
     });
     Route::post('/logout', [AuthenticatedSessionController::class, 'destroy']); //kijelentkezési útvonal
 });
+
+
+
 //Admin útvonalak
 
 //csak azok férhetnek hozzá akik hitelesített fh-k és, admin joggal rendelkeznek
@@ -35,20 +38,15 @@ Route::middleware(['auth:sanctum', Admin::class])->group(function () {
     Route::delete('/admin/delete/comment/{id}', [RegisteredUserController::class, 'destroyComment']);
 });
 
+
+//Moderátor
 Route::middleware(['auth:sanctum', Moderator::class])->group(function () {
     Route::delete('/admin/delete/comment/{id}', [RegisteredUserController::class, 'destroyComment']);
 });
 
 
-//admin módosít egy filmet
-//admin felrak 1 témát
-//admin töröl egy tagot
-//admin listázza a usereket
 
-
-
-
-//regisztrált tag
+//Regisztrált tag
 Route::middleware(['auth:sanctum', User::class])->group(function () {
     Route::post('/user/topic', [RegisteredUserController::class, 'storeTopic']);
     Route::post('/user/comment', [RegisteredUserController::class, 'storeComment']);
@@ -57,8 +55,6 @@ Route::middleware(['auth:sanctum', User::class])->group(function () {
     Route::get('/user/topic', [RegisteredUserController::class, 'indexTopic']);
 });
 
-//módosít 1 filmet magának
-//user felrak 1 témát
 
 
 //vendég
