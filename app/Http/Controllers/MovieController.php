@@ -13,7 +13,8 @@ class MovieController extends Controller
      */
     public function index()
     {
-        //
+        $movies = Movie::all();  // Az összes film lekérése az adatbázisból
+        return response()->json($movies);  
     }
 
     /**
@@ -21,15 +22,23 @@ class MovieController extends Controller
      */
     public function store(StoreMovieRequest $request)
     {
-        //
+      
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Movie $movie)
+    public function show($id) //id alapján megtalál 1 filmet
     {
-        //
+        $movie = Movie::find($id);
+
+       
+        if (!$movie) {
+            return response()->json([
+                'message' => 'Movie not found'
+            ], 404);
+        }
+        return response()->json($movie, 200);
     }
 
     /**

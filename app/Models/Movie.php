@@ -10,6 +10,8 @@ class Movie extends Model
     /** @use HasFactory<\Database\Factories\MovieFactory> */
     use HasFactory;
 
+    protected $table = 'movies';
+
     protected $fillable = [
         'title',
         'description',
