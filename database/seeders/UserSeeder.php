@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
                 'name' => 'Admin',
                 'gender' => 'male',
                 'birth_year' => 2000,
-                'role' => 0,
+                'role' => 0,//admin
                 'is_deleted' => false,
                 'password' => Hash::make('admin')
             ],
@@ -33,7 +33,7 @@ class UserSeeder extends Seeder
                 'name' => 'Teszt Jakab',
                 'gender' => 'male',
                 'birth_year' => 1999,
-                'role' => 1,
+                'role' => 1,//regisztrált felhasz
                 'is_deleted' => false,
                 'password' => Hash::make('jakab')
             ],
@@ -44,7 +44,7 @@ class UserSeeder extends Seeder
                 'name' => 'Vendég Vilmos',
                 'gender' => 'male',
                 'birth_year' => 1991,
-                'role' => 1,
+                'role' => 2,//vendég
                 'is_deleted' => false,
                 'password' => Hash::make('vilmos')
             ],
